@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandi7469/Mern-Auth.git"
+  },
+  "author": "Amanda Changa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mandi7469/Mern-Auth/issues"
+  },
+  "homepage": "https://github.com/mandi7469/Mern-Auth#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.7"
+  }
+}
