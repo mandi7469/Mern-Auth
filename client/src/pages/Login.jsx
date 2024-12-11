@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 export default function Login() {
+// initializing state for email and password
 const [data, setData] = useState({
   email: '',
   password: '',

@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 export default function Register() {
+  // initializing state for name, email and password
   const [data, setData] = useState({
     name: "",
     email: "",
