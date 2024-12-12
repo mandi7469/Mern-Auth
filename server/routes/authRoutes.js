@@ -5,7 +5,6 @@ const cors = require("cors");
 const { test } = require("../controllers/authController");
 
 // middleware
-
 router.use(
   cors({
     credentials: true,
