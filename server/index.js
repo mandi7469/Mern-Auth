@@ -5,7 +5,10 @@ const cors = require("cors");
 const { mongoose } = require("mongoose");
 
 //database connection
-mongoose.connect(process.env.MONGO_URL);
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("Database connected"))
+  .catch((err) => console.log("Database not connected", err));
 
 // create an express app
 const app = express();
