@@ -3,16 +3,18 @@ const express = require("express");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
 const { mongoose } = require("mongoose");
+const app = express();
 
 // database connection
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("Database connected"))
   .catch((err) => console.log("Database not connected", err));
+  
+// middleware
+app.use(express.json())
 
-// create an express app
-const app = express();
-
+// mounts the authentication route at the root path "/"
 app.use("/", require("./routes/authRoutes"));
 
 // start the server
