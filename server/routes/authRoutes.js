@@ -12,6 +12,8 @@ router.use(
   })
 );
 
+// GET route for the root path
 router.get("/", test);
 
+// router export
 module.exports = router;
