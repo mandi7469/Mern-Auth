@@ -13,11 +13,12 @@ export default function Register() {
     password: "",
   });
 
-  // registration form POST request
+  // register user
   const registerUser = async (e) => {
     e.preventDefault();
     const { name, email, password } = data;
     try {
+      // POST request for register page
       const { data } = await axios.post("/register", {
         name,
         email,

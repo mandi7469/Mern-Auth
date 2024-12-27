@@ -1,3 +1,4 @@
+// imports
 const User = require("../models/user");
 const { hashPassword, comparePassword } = require("../helpers/auth");
 
@@ -30,7 +31,7 @@ const registerUser = async (req, res) => {
       });
     }
 
-    const hashedPassword = await hashPassword(password)
+    const hashedPassword = await hashPassword(password);
 
     // create new user
     const user = await User.create({
@@ -45,8 +46,37 @@ const registerUser = async (req, res) => {
   }
 };
 
+// login
+const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // check if user exists
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.json({
+        error: "No user found",
+      });
+    }
+
+    // check password match
+    const match = await comparePassword(password, user.password);
+    if (match) {
+      res.json("passwords match");
+    }
+    if (!match) {
+      res.json({
+        error: "Incorrect password",
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 // exports
 module.exports = {
   test,
   registerUser,
+  loginUser,
 };
