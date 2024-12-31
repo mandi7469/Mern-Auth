@@ -1,0 +1,19 @@
+@import "../index.css";
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 60px;
+}
+
+.menu-items {
+  color: var(--text-white);
+  font-family: var(--font-playfair);
+  text-decoration: none;
+  font-size: 25px;
+}
+.menu-items:hover {
+  color: var(--text-black);
+}

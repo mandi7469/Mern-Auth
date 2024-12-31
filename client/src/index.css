@@ -12,6 +12,10 @@
   --purple-dark: #312244;
   --purple-med: #3e1f47;
   --purple-light: #4d194d;
+
+  /* fonts */
+  --font-roboto: "Roboto";
+  --font-playfair: "Playfair-Display";
 }
 
 * {
