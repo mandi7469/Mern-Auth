@@ -12,9 +12,14 @@ export default function Login() {
     password: "",
   });
 
+  const handleInputChange = (event) => {
+    const {name, value} = event.target;
+    setData({...data, [name]: value}); 
+  }
+
   // login user
-  const loginUser = async (e) => {
-    e.preventDefault();
+  const loginUser = async (event) => {
+    event.preventDefault();
     const { email, password } = data;
     try {
       // POST request for login page
@@ -38,15 +43,17 @@ export default function Login() {
         <input
           type="email"
           placeholder="enter email"
+          name='email'
           value={data.email}
-          onChange={(e) => setData({ ...data, email: e.target.value })}
+          onChange={handleInputChange}
         />
         <label>Password</label>
         <input
           type="password"
           placeholder="enter password"
+          name='password'
           value={data.password}
-          onChange={(e) => setData({ ...data, password: e.target.value })}
+          onChange={handleInputChange}
         />
         <button type="submit">Login</button>
       </form>

@@ -13,9 +13,14 @@ export default function Register() {
     password: "",
   });
 
+  const handleInputChange = (event) => {
+    const {name, value} = event.target;
+    setData({...data, [name]: value}); 
+  }
+
   // register user
-  const registerUser = async (e) => {
-    e.preventDefault();
+  const registerUser = async (event) => {
+    event.preventDefault();
     const { name, email, password } = data;
     try {
       // POST request for register page
@@ -44,22 +49,25 @@ export default function Register() {
         <input
           type="text"
           placeholder="enter name"
+          name='name'
           value={data.name}
-          onChange={(e) => setData({ ...data, name: e.target.value })}
+          onChange={handleInputChange}
         />
         <label>Email</label>
         <input
           type="email"
           placeholder="enter email"
+          name='email'
           value={data.email}
-          onChange={(e) => setData({ ...data, email: e.target.value })}
+          onChange={handleInputChange}
         />
         <label>Password</label>
         <input
           type="password"
           placeholder="enter password"
+          name='password'
           value={data.password}
-          onChange={(e) => setData({ ...data, password: e.target.value })}
+          onChange={handleInputChange}
         />
         <button type="submit">Submit</button>
       </form>

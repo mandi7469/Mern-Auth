@@ -16,7 +16,7 @@ axios.defaults.withCredentials = true;
 
 function App() {
   return (
-    <>
+    <div className="App">
       <UserContextProvider>
         <Navbar />
         <Toaster position="bottom-right" toastOptions={{ duration: 5000 }} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </UserContextProvider>
-    </>
+    </div>
   );
 }
 
