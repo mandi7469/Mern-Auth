@@ -3,6 +3,9 @@
 .App {
   width: 100vw;
   min-height: 100vh;
-  background-image: linear-gradient(#006466, #4d194d);
+  background: linear-gradient(#006466, #4d194d);
   background-size: cover;
+  background-attachment: fixed;
 }
+
+

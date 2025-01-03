@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import "./Pages.css";
 
 export default function Register() {
   // initializing state for name, email and password
@@ -14,9 +15,9 @@ export default function Register() {
   });
 
   const handleInputChange = (event) => {
-    const {name, value} = event.target;
-    setData({...data, [name]: value}); 
-  }
+    const { name, value } = event.target;
+    setData({ ...data, [name]: value });
+  };
 
   // register user
   const registerUser = async (event) => {
@@ -43,34 +44,38 @@ export default function Register() {
 
   // register form
   return (
-    <div>
-      <form onSubmit={registerUser}>
-        <label>Name</label>
-        <input
-          type="text"
-          placeholder="enter name"
-          name='name'
-          value={data.name}
-          onChange={handleInputChange}
-        />
-        <label>Email</label>
-        <input
-          type="email"
-          placeholder="enter email"
-          name='email'
-          value={data.email}
-          onChange={handleInputChange}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="enter password"
-          name='password'
-          value={data.password}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Submit</button>
-      </form>
+    <div className="page">
+      <div className="user">
+        <form className="userForm" onSubmit={registerUser}>
+          <div className="inputGroup">
+            <label>Name</label>
+            <input
+              type="text"
+              placeholder="enter name"
+              name="name"
+              value={data.name}
+              onChange={handleInputChange}
+            />
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="enter email"
+              name="email"
+              value={data.email}
+              onChange={handleInputChange}
+            />
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="enter password"
+              name="password"
+              value={data.password}
+              onChange={handleInputChange}
+            />
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

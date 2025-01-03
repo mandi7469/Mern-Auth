@@ -1,5 +1,6 @@
 @import "../index.css";
 
+/* styling for home page */
 .homeImg {
   padding-top: 50px;
   padding-bottom: 30px;
@@ -24,9 +25,68 @@
   }
 }
 
-p {
-  padding-top: 20px;
+/* styling for register/login page */
+.page {
+  overflow: hidden;
+}
+
+.user {
+  background-color: white;
+  width: 25%;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+}
+
+.userForm .inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.userForm .inputGroup label {
+  margin-top: 10px;
+  font-family: var(--font-playfair);
+}
+
+.userForm .inputGroup input {
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.inputGroup button {
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: var(--caribbean-current);
   color: var(--yellow);
   font-family: var(--font-playfair);
-  font-size: 15px;
+}
+
+.inputGroup button:hover {
+  box-shadow: 0 0 5px #000000;
+}
+
+/* styling for dashboard page */
+
+.dash {
+  font-family: var(--font-playfair);
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #4d194d, #fff);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.userDash {
+  font-family: var(--font-playfair);
+  color: var(--yellow);
+  font-size: 20px;
+}
+
+@media screen and (max-width: 830px) {
+  .user {
+    width: 50%;
+  }
 }

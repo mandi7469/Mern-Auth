@@ -19,6 +19,7 @@ axios.defaults.withCredentials = true;
 
 function App() {
   return (
+    <>
     <div className="App">
       <UserContextProvider>
         <Navbar />
@@ -31,6 +32,7 @@ function App() {
         </Routes>
       </UserContextProvider>
     </div>
+    </>
   );
 }
 

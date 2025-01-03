@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import "./Pages.css";
 
 export default function Login() {
   // initializing state for email and password
@@ -13,9 +14,9 @@ export default function Login() {
   });
 
   const handleInputChange = (event) => {
-    const {name, value} = event.target;
-    setData({...data, [name]: value}); 
-  }
+    const { name, value } = event.target;
+    setData({ ...data, [name]: value });
+  };
 
   // login user
   const loginUser = async (event) => {
@@ -37,26 +38,30 @@ export default function Login() {
   };
   // login form
   return (
-    <div>
-      <form onSubmit={loginUser}>
-        <label>Email</label>
-        <input
-          type="email"
-          placeholder="enter email"
-          name='email'
-          value={data.email}
-          onChange={handleInputChange}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="enter password"
-          name='password'
-          value={data.password}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Login</button>
-      </form>
+    <div className="page">
+      <div className="user">
+        <form className="userForm" onSubmit={loginUser}>
+          <div className="inputGroup">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="enter email"
+              name="email"
+              value={data.email}
+              onChange={handleInputChange}
+            />
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="enter password"
+              name="password"
+              value={data.password}
+              onChange={handleInputChange}
+            />
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
