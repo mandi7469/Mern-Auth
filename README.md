@@ -9,7 +9,7 @@
 
 ## Description
 
-This is a full-stack stack register and login page. The application uses authentication, authorization, encrypting password, user tracking with a cookie, and utilizes React-hot-toast notifactions. 
+Built a full-stack stack register and login page using MERN. The application uses authentication, authorization, encrypting password, user tracking with a cookie, and utilizes React-hot-toast notifactions. 
 
 ## Table of Contents 
 
