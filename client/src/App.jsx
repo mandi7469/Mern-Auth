@@ -1,4 +1,6 @@
 // global imports for the app
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -9,6 +11,7 @@ import axios from "axios";
 import { Toaster } from "react-hot-toast";
 import { UserContextProvider } from "../context/userContext";
 import Dashboard from "./pages/Dashboard";
+
 
 // configure axios defaults for all requests
 axios.defaults.baseURL = "http://localhost:8000";

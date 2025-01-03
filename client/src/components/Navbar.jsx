@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
+
+
 export default function Navbar() {
   return (
     // links to homepage, registration and login
@@ -15,3 +17,6 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
+
